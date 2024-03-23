@@ -205,24 +205,24 @@
     </div>
 
     <!-- RADIO INFORMATION -->
-    <div class="form-section" style="width:1000px">
+    <div class="radio-form-section">
             <h3 class="form-section-title">Radio Information</h3>
 
             <div class="form-item required-field">
                     Will you be using any 2-way radios?<br>
-            </div>
 
-            <div class="form-question">
-                    <fieldset id="group-2" name="Carrying 2-Way Radios?">
-                            <label class="container"><b>YES</b>
-                                    <input type="radio" checked="checked" name="Carrying 2-Way Radios?" value="YES" onclick="showInfo();">
-                                    <span class="checkmark"></span>
-                            </label>
-                            <label class="container"><b>NO</b>
-                                    <input type="radio" name="Carrying 2-Way Radios?" value="NO" onclick="hideInfo();">
-                                    <span class="checkmark"></span>
-                            </label>
-                    </fieldset>
+                    <div class="form-question">
+                        <fieldset id="group-2" name="Carrying 2-Way Radios?">
+                                <label class="container"><b>YES</b>
+                                        <input type="radio" checked="checked" name="Carrying 2-Way Radios?" value="YES" onclick="showInfo();">
+                                        <span class="checkmark"></span>
+                                </label>
+                                <label class="container"><b>NO</b>
+                                        <input type="radio" name="Carrying 2-Way Radios?" value="NO" onclick="hideInfo();">
+                                        <span class="checkmark"></span>
+                                </label>
+                        </fieldset>
+                </div>
             </div>
 
             <div class="form-text" style="text-align: center;">
@@ -236,7 +236,7 @@
             <div id="radio-popup" class="form-text">
 
                     <div id="radio-notice">
-                            <p style="color:red; font-size: 24px;">
+                            <p style="color:red; font-size: 2vw;">
                                     <b>*** IMPORTANT ***</b>
                             </p>
                                     <br>
@@ -294,7 +294,7 @@
     </div>
 
     <!-- WIRELESS DEVICES -->
-    <div class="form-section" style="width:1300px;">
+    <div class="wireless-form-section">
             <h3 class="form-section-title">Wireless Information</h3>
 
             <div class="form-item required-field">
@@ -340,9 +340,9 @@
                     <table name="rf-table-header" class="rf-table-header">
                             <thead>
                                     <tr>
-                                            <td style="width:24%">Type</td>
-                                            <td style="width:14%"># of Channels</td>
-                                            <td style="width:22%">Manufacturer</td>
+                                            <td style="width:28%">Type</td>
+                                            <td style="width:12%"># of Channels</td>
+                                            <td style="width:20%">Manufacturer</td>
                                             <td style="width:18%">Model</td>
                                             <td style="width:18%">Range</td>
                                     </tr>
@@ -355,8 +355,8 @@
                     <table id="rf-table" name="rf-table" style="color:black;">
                             <!-- DEVICE 1 -->
                             <tr>
-                                    <td style="width:23%">
-                                            <select id="device-type-1" class="device-type-1" name="(1) Device Type" style="width:fit-content; height:50px; margin-bottom: 8px; color:black;">
+                                    <td style="width:28%">
+                                            <select id="device-type-1" class="device-type-1" name="(1) Device Type"> <!-- style="width:fit-content; height:50px; margin-bottom: 8px; color:black; -->
                                                     <option value="" disabled selected>Select device type</option>
                                                     <option value="Microphone">Microphone</option>
                                                     <option value="IEM/IFB">IEM / IFB</option>
@@ -366,10 +366,10 @@
                                                     <option value="Other">Other</option>
                                             </select>
                                     </td>
-                                    <td style="width:14%">
+                                    <td style="width:12%">
                                             <input type="text" name="(1) # of Frequencies" placeholder="#">
                                     </td>
-                                    <td style="width:22%">
+                                    <td style="width:20%">
                                             <input type="text" name="(1) Manufacturer" placeholder="Manufacturer">
                                     </td>
                                     <td style="width:18%">
@@ -408,7 +408,7 @@
     </div>
 
 
-    <div class="form-section" style="width:1000px">
+    <div class="comments-section">
             <h3 class="form-section-title">Comments</h3>
 
             <div class="form-text">
@@ -430,6 +430,12 @@
     </div>
 
     <button class="submit-button center">Submit</button>
+
+    <div class="submit-warning">
+        <h3>Warning: There is no way to edit a submission.<br>
+            If you need to make changes, you will have to re-submit.<br>
+            Apologies for any inconvenience.</h3>
+    </div>
 
 </form>
         

@@ -51,13 +51,13 @@ function addRow() { // 24 / 14 / 22 / 18 / 18
         var cell3 = row.insertCell(-1);
         var cell4 = row.insertCell(-1);
         var cell5 = row.insertCell(-1);
-        cell1.style.width = "24%";
-        cell2.style.width = "14%";
-        cell3.style.width = "22%";
+        cell1.style.width = "28%";
+        cell2.style.width = "12%";
+        cell3.style.width = "20%";
         cell4.style.width = "18%";
         cell5.style.width = "18%";
 
-        var cell1Text = "<select class='device-type-" + rowCount + "' name='(" + rowCount + ") Device Type' onchange='getVals()' style='width:fit-content; height:50px; margin-bottom: 8px; color:black;'><option value='' disabled selected>Select device type</option> <option value='Microphone'>Microphone</option> <option value='IEM/IFB'>IEM / IFB</option> <option value='Backline/Instrument'>Backline / Instrument</option><option value='Intercom'>Intercom</option><option value='Hop/Link'>Hop / Link</option> <option value='Other'>Other</option></select>";
+        var cell1Text = "<select class='device-type-" + rowCount + "' name='(" + rowCount + ") Device Type' onchange='getVals()'><option value='' disabled selected>Select device type</option> <option value='Microphone'>Microphone</option> <option value='IEM/IFB'>IEM / IFB</option> <option value='Backline/Instrument'>Backline / Instrument</option><option value='Intercom'>Intercom</option><option value='Hop/Link'>Hop / Link</option> <option value='Other'>Other</option></select>";
         cell1.innerHTML += cell1Text
         
         var cell2Text = "<input type='text' name='(" + rowCount + ") # of Frequencies' onchange='getVals()' placeholder='#'>";

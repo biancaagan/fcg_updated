@@ -302,8 +302,77 @@ footer {
 
 /* -------------------------------------------------------------------------------------------- */
 
+/* CONTACT FORM */
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-family: Consolas;
+    font-size: 18px;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #81BB4E;
+    color: white;
+    padding: 12px 20px;
+    /* border: none; */
+    border: 0.25vw solid #81BB4E; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Futura-Book;
+    font-size: 24px;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: white;
+    color: #81BB4E;
+    border: 0.25vw solid #81BB4E; 
+    border-radius: 4px;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid #81BB4E;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Futura-Book;
+    /* font-size: 24px; */
+}
+
+form {
+    background-color: #f2f2f2;
+}
+
+label {
+    background-color: #f2f2f2;
+}
+
+#contact-email {
+    background-color: #f2f2f2;
+    font-family: Futura-Book;
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
 /* CREDITS / HELP
 
 Responsive navbar: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ 
+Contact form: /* https://www.w3schools.com/howto/howto_css_contact_form.asp 
 
 */

@@ -302,6 +302,16 @@ footer {
 
 /* -------------------------------------------------------------------------------------------- */
 
+
+.show-logo {
+    border-style: dotted;
+    border-radius: 20px;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto 10px auto;
+    padding: 25px;
+}
+
 /* CREDITS / HELP
 
 Responsive navbar: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ 

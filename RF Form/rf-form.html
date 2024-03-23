@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="rf-form-style.css" />
+    <script src="rf-form.js"></script>
+    <title>FCG</title>
+</head>
+
+<body>
+
+    <!-- ----------------------- TOP BAR / NAVIGATION ----------------------- -->
+    <nav class="navbar">
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="/">
+                <img src="/Media/FCG Logo 1.png" width="250px">
+            </a>
+        </div>
+
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+
+            <!-- USING CHECKBOX HACK -->
+            <input type="checkbox" class="hack" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+
+                <li><a href="/">Home</a></li>
+                <li><a href="/About/about.html">About</a></li>
+
+                <div class="dropdown-menu">
+                    <li class="rf-requests">
+                        <a href="/RF Requests/rf-requests.html">Coordination Requests</a>
+                        <i class="fa fa-caret-down"></i>
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown">
+                            <li><a href="/RF Form/rf-form.html">March Madness Music Festival</a></li>
+                            <li><a href="/">Show</a></li>
+                            <li><a href="/">Show</a></li>
+                            <li><a href="/">Show</a></li>
+                            <li><a href="/">Show</a></li>
+                        </ul>
+                    </li>
+                </div>
+
+                <li><a href="/Services/services.html">Services</a></li>
+                <li><a href="/Contact/contact.html">Contact</a></li>
+
+            </li>
+            </div>
+        </ul>
+    </nav>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+
+
+    <main>
+
+        <!-- ----------------------- RF REQUEST FORM ----------------------- -->
+        <script>
+            // https://stackoverflow.com/questions/70767778/html-form-submission-to-google-sheets-using-apps-scripts-landing-thank-you-pag
+            window.addEventListener("load", function() {
+              const form = document.getElementById('test-form');
+              form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                  method: 'POST',
+                  body: data,
+                })
+                .then(() => {
+                window.location.href = '/RF Form/rf_form_landing.html';
+                })
+              });
+            });
+            </script>
+
+    <form id="test-form" method="POST" action="https://script.google.com/macros/s/AKfycbwNhIQvfWCr-BPeAvnPoOtznPvqyMro9de2i9rYqnDcYbC0zIayCjUdWV1SRgHbyN0/exec">
+
+    <!-- FORM HEADER -->
+    <div class="form-header">
+            <h1 class="form-title">Frequency Coordination Requests</h1><br>
+            <!-- <h3 class="form-show">WWWY 2023</h3><br> -->
+            <img class="show-logo" src="/Media/MarchMadnessLogo.jpg">
+            <p class="form-description">FCG is proud to provide frequency coordination for<br>the 2024 March Madness Music Festival.<br>
+                    Please submit your coordination requests below.</p><br>
+    </div>
+
+    <!-- CONTACT INFORMATION -->
+    <div class="form-section">
+            <h3 class="form-section-title">Contact Information</h3>
+
+            <div class="form-item required-field">
+                    <label>Who is this request for?</label>
+                    <input name="Submitted For" type="text"
+                            placeholder="&#40;Band / Artist / Vendor / Media Outlet / etc.&#41;" required/>
+            </div>
+
+            <div class="form-item required-field">
+                    <label>Contact name:</label>
+                    <input name="Name" type="text" placeholder="Enter full name" required/>
+            </div>
+
+            <div class="form-item required-field">
+                    <label>Contact email:</label>
+                    <input name="Email" type="text" placeholder="Enter email" required/>
+            </div>
+
+            <div class="form-item required-field">
+                    <label>Contact phone:</label>
+                    <input name="Phone" type="text" placeholder="Enter phone number" required/>
+            </div>
+    </div>
+
+    <!-- SHOW INFORMATION -->
+    <div class="form-section">
+            <h3 class="form-section-title">Show Information</h3>
+
+            <!-- SHOW DATES -->
+            <div class="form-item required-field">
+                    Dates of use:
+                    
+                    <br>
+
+                    <!-- Checkboxes -->
+                    <input type="checkbox" id="date-1" name="date" onchange="updateDates()" value="April 5">
+                    <label for="date-1">April 5</label>
+                    <br>
+                    <input type="checkbox" id="date-2" name="date" onchange="updateDates()" value="April 6">
+                    <label for="date-2">April 6</label>
+                    <br>
+                    <input type="checkbox" id="date-3" name="date" onchange="updateDates()" value="April 7">
+                    <label for="date-3">April 7</label>
+
+                    <!-- Hidden input value for selected dates -->
+                    <input name="Dates" id="hidden-date" type="text" placeholder="Selected Dates"/>
+
+
+                    <script>
+                            function updateDates(){
+                                    var checkboxes = document.getElementsByName("date");
+                                    var checkedBoxes = [];
+                                    for (var i = 0; i < checkboxes.length; i++){
+                                            if(checkboxes[i].checked){
+                                                    checkedBoxes.push(" " + checkboxes[i].value);
+                                            }
+                                    }
+                                    document.getElementById('hidden-date').value = checkedBoxes.toString();
+                            }
+                    </script>
+
+                    <br>
+                    
+            </div>
+
+            <!-- SHOW LOCATION(S) -->
+            <div class="form-item required-field">
+                    Stage / location:
+                    <br>
+
+                    <!-- Checkboxes -->
+                    <input type="checkbox" name="location" id="loc-1" onchange="updateLocations()" value="Stage 1">
+                    <label for="Apr5">Stage 1</label>
+                    <br>
+                    <input type="checkbox" name="location" id="loc-2" onchange="updateLocations()" value="Stage 2">
+                    <label for="Apr6">Stage 2</label>
+                    <br>
+                    <input type="checkbox" name="location" id="loc-3" onchange="updateLocations()" value="Stage 3">
+                    <label for="Apr7">Stage 3</label>
+                    <br>
+                    <input type="checkbox" name="location" id="loc-other" onchange="updateLocations()" value="Other">
+                    <label for="Apr7">Other &#40;Please specify below&#41;</label>
+                    <br>
+                    <input type="text" id="other-loc" name="other-loc" onchange="updateLocations()" placeholder="Specify here">
+
+                    <!-- Hidden input value for selected locations -->
+                    <input name="Locations" id="hidden-loc" type="text" placeholder="Selected Locations"/>
+
+                    <script>
+                            function updateLocations(){
+                                    var checkboxes = document.getElementsByName("location");
+                                    var checkedBoxes = [];
+                                    for (var i = 0; i < checkboxes.length; i++){
+                                            if(checkboxes[i].checked){
+                                                    if(checkboxes[i].value == "Other"){
+                                                            var otherLocation = document.getElementById("other-loc").value;
+                                                            checkedBoxes.push(" " + otherLocation);
+                                                    }
+                                                    else{
+                                                            checkedBoxes.push(" " + checkboxes[i].value);
+                                                    }
+                                            }
+                                    }
+                                    document.getElementById('hidden-loc').value = checkedBoxes.toString();
+                            }
+                    </script>
+            </div>
+    </div>
+
+    <!-- RADIO INFORMATION -->
+    <div class="form-section" style="width:1000px">
+            <h3 class="form-section-title">Radio Information</h3>
+
+            <div class="form-item required-field">
+                    Will you be using any 2-way radios?<br>
+            </div>
+
+            <div class="form-question">
+                    <fieldset id="group-2" name="Carrying 2-Way Radios?">
+                            <label class="container"><b>YES</b>
+                                    <input type="radio" checked="checked" name="Carrying 2-Way Radios?" value="YES" onclick="showInfo();">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container"><b>NO</b>
+                                    <input type="radio" name="Carrying 2-Way Radios?" value="NO" onclick="hideInfo();">
+                                    <span class="checkmark"></span>
+                            </label>
+                    </fieldset>
+            </div>
+
+            <div class="form-text" style="text-align: center;">
+                    <p style="color:red;">
+                            ** Radios that are not cleared will be asked to cease operation immediately. **</p>
+                    </p>
+            </div>
+
+            <br>
+
+            <div id="radio-popup" class="form-text">
+
+                    <div id="radio-notice">
+                            <p style="color:red; font-size: 24px;">
+                                    <b>*** IMPORTANT ***</b>
+                            </p>
+                                    <br>
+                            <p style="color: red;">
+                                    IN ORDER TO RECEIVE YOUR APPROVED CHANNEL ASSIGNMENT YOU MUST PROVIDE THE CHANNELS AND FREQUENCIES YOUR RADIOS SUPPORT
+                            </p>
+                                    <br>
+                            <p>
+                                    Due to the limited open spectrum in the two-way radio band, all radios brought into the festival must be coordinated and cleared to eliminate any interference with festival production as well as emergency services.
+                            </p>
+                                    <br>
+                            <p>
+                                    Each submission will be assigned <u><b>one</b></u> radio channel to use while at the festival.  If your act requires a higher channel count, please request additional channels in the comment section of this form.  Approved channel counts higher than one will be granted if no conflicts are found.
+                            </p>
+                                    <br>
+                            <p style="color:red;">
+                                    ** The use of any all-call channels is prohibited. **
+                            </p>
+                                    <br>
+                            <!-- <p style="color:red;">
+                                    ** Radios that are not cleared will be asked to cease operation immediately. **</p>
+                            </p>
+                                    <br> -->
+                            <p>
+                                    The programmed frequencies for each channel must be entered below.  If this information is not known, please contact your radio provider.
+                            </p>  
+                    </div>
+
+                    <div class="form-item required-field">
+                            <!-- Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to OR attach a file:<br> -->
+                            Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to:<br>
+                            <br>
+                            
+                            <!-- Code for file upload option -->
+                            <!-- <label for="radio-files">Select file(s):</label>
+                            <input type="file" id="radio-files" name="radio-files" multiple><br><br> -->
+                            <!-- <br> -->
+
+                            <textarea id="radio-list" name="radio-list" rows="4" cols="50" onchange="updateRadioFreqs()" placeholder="List ALL channel #s and their frequencies..."></textarea>
+                            
+                            <!-- Hidden input value for radio frequencies -->
+                            <input name="Radio Frequencies" id="hidden-radios" type="text" placeholder="Selected Locations"/>
+
+                            <script>
+                                    function updateRadioFreqs(){
+                                            document.getElementById('hidden-radios').value = document.getElementById("radio-list").value;
+                                    }
+                            </script>
+                    </div> 
+
+            </div>
+
+            <br>
+    
+    </div>
+
+    <!-- WIRELESS DEVICES -->
+    <div class="form-section" style="width:1300px;">
+            <h3 class="form-section-title">Wireless Information</h3>
+
+            <div class="form-item required-field">
+                    Will you be using any wireless devices? &#40;microphones / IEMs / backline / intercom / RF cam / etc.&#41;
+            </div>
+
+            <div class="form-question">
+                    <fieldset id="group-1" name="Use of Wireless Devices">
+                            <label class="container"><b>YES</b> &mdash; my RF equipment <b>ONLY</b>.
+                                    <input type="radio" checked="checked" name="Use of Wireless Devices" value="YES, my RF equipment ONLY" onclick="showRFtable()">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container"><b>YES</b> &mdash; stage provided RF equipment <b>ONLY</b>.
+                                    <input type="radio" name="Use of Wireless Devices" value="YES, stage provided RF equipment ONLY" onclick="hideRFtable()">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container"><b>YES</b> &mdash; my RF equipment <b>WITH</b> stage provided RF equipment.
+                                    <input type="radio" name="Use of Wireless Devices" value="YES, my RF equipment WITH stage provided RF equipment" onclick="showRFtable()">
+                                    <span class="checkmark"></span>
+                            </label>
+                            <label class="container"><b>NO</b> &mdash; we will not be using any RF equipment.
+                                    <input type="radio" name="Use of Wireless Devices" value="NO, we will not be using any RF equipment" onclick="hideRFtable()">
+                                    <span class="checkmark"></span>
+                            </label>
+                    </fieldset>
+            </div>
+
+            
+            <!--  SHOW / HIDE THIS SECTION -->
+            <div id="device-info" class="form-subsection">
+                    <div class="form-text">
+                            <p>Please specify your own wireless equipment below.</p>
+                            <p>Click the "+" or "-" button for more or less devices.</p>
+                    </div>
+
+                    <!-- <br> -->
+                    <br>
+                    <hr>
+
+                    <button type="button" class="table-button" onclick="addRow(); getVals();">+</button>
+                    <button type="button" class="table-button" onclick="deleteRow(); getVals();">-</button>
+
+                    <table name="rf-table-header" class="rf-table-header">
+                            <thead>
+                                    <tr>
+                                            <td style="width:24%">Type</td>
+                                            <td style="width:14%"># of Channels</td>
+                                            <td style="width:22%">Manufacturer</td>
+                                            <td style="width:18%">Model</td>
+                                            <td style="width:18%">Range</td>
+                                    </tr>
+                            </thead>
+                    </table>
+
+                    <hr>
+
+
+                    <table id="rf-table" name="rf-table" style="color:black;">
+                            <!-- DEVICE 1 -->
+                            <tr>
+                                    <td style="width:23%">
+                                            <select id="device-type-1" class="device-type-1" name="(1) Device Type" style="width:fit-content; height:50px; margin-bottom: 8px; color:black;">
+                                                    <option value="" disabled selected>Select device type</option>
+                                                    <option value="Microphone">Microphone</option>
+                                                    <option value="IEM/IFB">IEM / IFB</option>
+                                                    <option value="Backline/Instrument">Backline / Instrument</option>
+                                                    <option value="Intercom">Intercom</option>
+                                                    <option value="Hop/Link">Hop / Link</option>
+                                                    <option value="Other">Other</option>
+                                            </select>
+                                    </td>
+                                    <td style="width:14%">
+                                            <input type="text" name="(1) # of Frequencies" placeholder="#">
+                                    </td>
+                                    <td style="width:22%">
+                                            <input type="text" name="(1) Manufacturer" placeholder="Manufacturer">
+                                    </td>
+                                    <td style="width:18%">
+                                            <input type="text" name="(1) Model" placeholder="Model">
+                                    </td>
+                                    <td style="width:18%">
+                                            <input type="text" name="(1) Frequency Range" placeholder="Range">
+                                    </td>
+                                    <!-- <td style="width:14%">
+                                            <input type="text" name="dev-1" onchange="getVals()" placeholder="#">
+                                    </td>
+                                    <td style="width:22%">
+                                            <input type="text" name="dev-1" onchange="getVals()" placeholder="Manufacturer">
+                                    </td>
+                                    <td style="width:18%">
+                                            <input type="text" name="dev-1" onchange="getVals()" placeholder="Model">
+                                    </td>
+                                    <td style="width:18%">
+                                            <input type="text" name="dev-1" onchange="getVals()" placeholder="Range">
+                                    </td> -->
+                            </tr>
+
+                    </table>
+
+                    <!-- CODE FOR MODULAR TABLE-->
+                    <!-- Hidden input value for testing -->
+                    <!-- <input name="Devices" id="hidden-dev" type="text" placeholder="Devices"/> -->
+
+                    <hr>
+                    <!-- <br> -->
+
+                    <!-- <button type="button" class="table-button" onclick="addRow(); getVals();">+</button>
+                    <button type="button" class="table-button" onclick="deleteRow(); getVals();">-</button> -->
+
+            </div>
+    </div>
+
+
+    <div class="form-section" style="width:1000px">
+            <h3 class="form-section-title">Comments</h3>
+
+            <div class="form-text">
+                    Enter any additional comments or notes:<br>
+            </div>
+
+            <br>
+
+            <textarea id="comment-section" name="comment-section" rows="4" cols="50" onchange="updateComments()" placeholder="...?"></textarea>
+                                                    
+            <!-- Hidden input value for comment section -->
+            <input name="Comments" id="hidden-comments" type="text" placeholder="Selected Locations"/>
+
+            <script>
+                    function updateComments(){
+                            document.getElementById('hidden-comments').value = document.getElementById("comment-section").value;
+                    }
+            </script>
+    </div>
+
+    <button class="submit-button center">Submit</button>
+
+</form>
+        
+    </main>
+
+
+    <!-- ----------------------- FOOTER ----------------------- -->
+    <footer>
+            <div class="social-links">
+                    <a class="social-icon" href="http://www.instagram.com/frequencycoordinationgroup">
+                            <img src="/Media/icon-instagram.png" width="25px">
+                    </a>
+                    <a class="social-icon" href="http://www.facebook.com/frequencycoordinationgroup">
+                            <img src="/Media/icon-facebook.png" width="25px">
+                    </a>
+            </div>
+
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Frequency Coordination Group, LLC.</h2>
+    </footer>
+    <!-- ----------------------- ----------------------- ----------------------- -->
+</body>
+
+</html>

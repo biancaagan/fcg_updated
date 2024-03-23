@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact-style.css" />
     <title>FCG</title>
 </head>
 
@@ -62,16 +62,35 @@
     <main>
 
         <div class="page-header">
-                <h1 id="page-title">Welcome</h1>
-                <hr>
-                <h3 id="page-subtitle">Frequency Coordination Group, LLC</h3><br>
-                <p id="page-desc">The FCG team has over 25 years of expertise in the 
-                        live audio and broadcast industry.
-                        <br>
-                        From Super Bowl &
-                        Lollapalooza to corporate meetings & Broadway shows.
-                </p>
-                <a href="/Contact/contact.html"><button class="contact-button">Contact Us</button></a>
+            <h1 id="page-title">Contact</h1>
+            <hr>
+            <!-- <h3 id="page-subtitle">Frequency Coordination Group, LLC</h3><br> -->
+            <p id="page-desc"> </p> 
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Email address..">
+                      
+              <label for="msg">Message</label>
+              <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+
+            <br>
+            <br>
+            <h3 id="contact-email">Or contact us at info@frequencycoordinationgroup.com</h3>
         </div>
         
     </main>

@@ -303,6 +303,35 @@ footer {
 
 /* -------------------------------------------------------------------------------------------- */
 
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+    #page-title {
+        font-size: 10vw;
+    }
+
+    #page-subtitle {
+        font-size: 8vw;
+        text-align: center;
+        inline-size: 300px;
+        text-wrap: break-word;
+    }
+
+    #page-desc {
+        width: 80vw;
+        font-size: 4vw;
+    }
+
+    .contact-button {
+        font-size: 4vw;
+    }
+
+    .footer-credits {
+        font-size: 2.5vw;
+        margin-top: 2vw;
+    }
+}
+
 /* CREDITS / HELP
 
 Responsive navbar: https://www.makeuseof.com/responsive-navigation-bar-using-html-and-css/ 

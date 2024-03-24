@@ -26,10 +26,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-  
-body {  
-    /* font-family: Consolas; */
-}
 
 main {
     /* border-style: dotted; */
@@ -63,9 +59,12 @@ li {
 
 /* LOGO */
 .logo {
-    /* font-size: 30px; */
     cursor: pointer;
     margin-left: 25px;
+}
+
+img.company-logo {
+    width: 250px;
 }
 
 /* NAVBAR MENU */
@@ -262,12 +261,11 @@ footer {
     /* border-style: dotted; */
     /* position: absolute; */
     bottom: 0;
-    padding: 10px 10px 15px 10px;
-    margin-top: 50px;
+    padding: 10px 0 10px 0;
+    margin-bottom: 20px;
     bottom: 0;
     width: 100%;
     text-align: center;
-    /* margin: 100px 0px 20px 0px; */
     background-color: white;
     border-top: 1px solid black;
 }
@@ -307,6 +305,10 @@ footer {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
+    img.company-logo {
+        width: 175px;
+    }
+
     #page-title {
         font-size: 10vw;
     }

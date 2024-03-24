@@ -27,10 +27,6 @@
     box-sizing: border-box;
 }
   
-body {  
-    /* font-family: Consolas; */
-}
-
 main {
     /* border-style: dotted; */
     margin-bottom: 100px;
@@ -63,9 +59,12 @@ li {
 
 /* LOGO */
 .logo {
-    /* font-size: 30px; */
     cursor: pointer;
     margin-left: 25px;
+}
+
+img.company-logo {
+    width: 250px;
 }
 
 /* NAVBAR MENU */
@@ -164,10 +163,6 @@ li {
         display: inline-block;
         background-color: var(--fcg-green);
         transition: 0.3s ease;
-    }
-
-    .menu li + li {
-        /* margin-top: 12px; */
     }
 
     .hack:checked ~ .menu {
@@ -368,6 +363,10 @@ label {
 
 /* MOBILE */
 @media only screen and (max-width: 600px) {
+    img.company-logo {
+        width: 175px;
+    }
+
     #page-title {
         font-size: 10vw;
     }

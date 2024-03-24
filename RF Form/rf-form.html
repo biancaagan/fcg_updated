@@ -130,14 +130,20 @@
                     <br>
 
                     <!-- Checkboxes -->
-                    <input type="checkbox" id="date-1" name="date" onchange="updateDates()" value="April 5">
-                    <label for="date-1">April 5</label>
-                    <br>
-                    <input type="checkbox" id="date-2" name="date" onchange="updateDates()" value="April 6">
-                    <label for="date-2">April 6</label>
-                    <br>
-                    <input type="checkbox" id="date-3" name="date" onchange="updateDates()" value="April 7">
-                    <label for="date-3">April 7</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container" for="date-1">April 5
+                            <input type="checkbox" id="date-1" name="date" onchange="updateDates()" value="April 5">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="date-2">April 6
+                            <input type="checkbox" id="date-2" name="date" onchange="updateDates()" value="April 6">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="date-3">April 7
+                            <input type="checkbox" id="date-3" name="date" onchange="updateDates()" value="April 7">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
 
                     <!-- Hidden input value for selected dates -->
                     <input name="Dates" id="hidden-date" type="text" placeholder="Selected Dates"/>
@@ -166,22 +172,28 @@
                     <br>
 
                     <!-- Checkboxes -->
-                    <input type="checkbox" name="location" id="loc-1" onchange="updateLocations()" value="Stage 1">
-                    <label for="Apr5">Stage 1</label>
-                    <br>
-                    <input type="checkbox" name="location" id="loc-2" onchange="updateLocations()" value="Stage 2">
-                    <label for="Apr6">Stage 2</label>
-                    <br>
-                    <input type="checkbox" name="location" id="loc-3" onchange="updateLocations()" value="Stage 3">
-                    <label for="Apr7">Stage 3</label>
-                    <br>
-                    <input type="checkbox" name="location" id="loc-other" onchange="updateLocations()" value="Other">
-                    <label for="Apr7">Other &#40;Please specify below&#41;</label>
-                    <br>
-                    <input type="text" id="other-loc" name="other-loc" onchange="updateLocations()" placeholder="Specify here">
+                    <div class="checkbox-group">
+                        <label class="checkbox-container" for="loc-1">Stage 1
+                            <input type="checkbox" id="loc-1" name="location" onchange="updateLocations()" value="Stage 1">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="loc-2">Stage 2
+                            <input type="checkbox" id="loc-2" name="location" onchange="updateLocations()" value="Stage 2">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="loc-3">Stage 3
+                            <input type="checkbox" id="loc-3" name="location" onchange="updateLocations()" value="Stage 3">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="loc-other">Other &#40;Please specify below&#41;
+                            <input type="checkbox" id="loc-other" name="location" onchange="updateLocations()" value="Other">
+                            <span class="checkmark"></span>
+                        </label>
+                        <input type="text" id="other-loc" name="other-loc" onchange="updateLocations()" placeholder="Specify here">
 
-                    <!-- Hidden input value for selected locations -->
-                    <input name="Locations" id="hidden-loc" type="text" placeholder="Selected Locations"/>
+                        <!-- Hidden input value for selected locations -->
+                        <input name="Locations" id="hidden-loc" type="text" placeholder="Selected Locations"/>
+                    </div>
 
                     <script>
                             function updateLocations(){
@@ -213,20 +225,20 @@
 
                     <div class="form-question">
                         <fieldset id="group-2" name="Carrying 2-Way Radios?">
-                                <label class="container"><b>YES</b>
+                                <label class="radio-container"><b>YES</b>
                                         <input type="radio" checked="checked" name="Carrying 2-Way Radios?" value="YES" onclick="showInfo();">
-                                        <span class="checkmark"></span>
+                                        <span class="radio-mark"></span>
                                 </label>
-                                <label class="container"><b>NO</b>
+                                <label class="radio-container"><b>NO</b>
                                         <input type="radio" name="Carrying 2-Way Radios?" value="NO" onclick="hideInfo();">
-                                        <span class="checkmark"></span>
+                                        <span class="radio-mark"></span>
                                 </label>
                         </fieldset>
                 </div>
             </div>
 
-            <div class="form-text" style="text-align: center;">
-                    <p style="color:red;">
+            <div class="radio-warning">
+                    <p>
                             ** Radios that are not cleared will be asked to cease operation immediately. **</p>
                     </p>
             </div>
@@ -236,7 +248,7 @@
             <div id="radio-popup" class="form-text">
 
                     <div id="radio-notice">
-                            <p style="color:red; font-size: 2vw;">
+                            <p style="color:red">
                                     <b>*** IMPORTANT ***</b>
                             </p>
                                     <br>
@@ -245,15 +257,18 @@
                             </p>
                                     <br>
                             <p>
-                                    Due to the limited open spectrum in the two-way radio band, all radios brought into the festival must be coordinated and cleared to eliminate any interference with festival production as well as emergency services.
+                                    Due to the limited open spectrum in the two-way radio band, all radios brought into the festival must be coordinated 
+                                    and cleared to eliminate any interference with festival production as well as emergency services.
                             </p>
                                     <br>
                             <p>
-                                    Each submission will be assigned <u><b>one</b></u> radio channel to use while at the festival.  If your act requires a higher channel count, please request additional channels in the comment section of this form.  Approved channel counts higher than one will be granted if no conflicts are found.
+                                    Each submission will be assigned <u><b>one</b></u> radio channel to use while at the festival.  If your act requires 
+                                    a higher channel count, please request additional channels in the comment section of this form.  Approved channel 
+                                    counts higher than one will be granted if no conflicts are found.
                             </p>
                                     <br>
                             <p style="color:red;">
-                                    ** The use of any all-call channels is prohibited. **
+                                    The use of any all-call channels is prohibited.
                             </p>
                                     <br>
                             <!-- <p style="color:red;">
@@ -303,21 +318,21 @@
 
             <div class="form-question">
                     <fieldset id="group-1" name="Use of Wireless Devices">
-                            <label class="container"><b>YES</b> &mdash; my RF equipment <b>ONLY</b>.
+                            <label class="radio-container"><b>YES</b> &mdash; my RF equipment <b>ONLY</b>.
                                     <input type="radio" checked="checked" name="Use of Wireless Devices" value="YES, my RF equipment ONLY" onclick="showRFtable()">
-                                    <span class="checkmark"></span>
+                                    <span class="radio-mark"></span>
                             </label>
-                            <label class="container"><b>YES</b> &mdash; stage provided RF equipment <b>ONLY</b>.
+                            <label class="radio-container"><b>YES</b> &mdash; stage provided RF equipment <b>ONLY</b>.
                                     <input type="radio" name="Use of Wireless Devices" value="YES, stage provided RF equipment ONLY" onclick="hideRFtable()">
-                                    <span class="checkmark"></span>
+                                    <span class="radio-mark"></span>
                             </label>
-                            <label class="container"><b>YES</b> &mdash; my RF equipment <b>WITH</b> stage provided RF equipment.
+                            <label class="radio-container"><b>YES</b> &mdash; my RF equipment <b>WITH</b> stage provided RF equipment.
                                     <input type="radio" name="Use of Wireless Devices" value="YES, my RF equipment WITH stage provided RF equipment" onclick="showRFtable()">
-                                    <span class="checkmark"></span>
+                                    <span class="radio-mark"></span>
                             </label>
-                            <label class="container"><b>NO</b> &mdash; we will not be using any RF equipment.
+                            <label class="radio-container"><b>NO</b> &mdash; we will not be using any RF equipment.
                                     <input type="radio" name="Use of Wireless Devices" value="NO, we will not be using any RF equipment" onclick="hideRFtable()">
-                                    <span class="checkmark"></span>
+                                    <span class="radio-mark"></span>
                             </label>
                     </fieldset>
             </div>

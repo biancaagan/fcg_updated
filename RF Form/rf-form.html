@@ -66,7 +66,7 @@
         <script>
             // https://stackoverflow.com/questions/70767778/html-form-submission-to-google-sheets-using-apps-scripts-landing-thank-you-pag
             window.addEventListener("load", function() {
-              const form = document.getElementById('test-form');
+              const form = document.getElementById('rf-form');
               form.addEventListener("submit", function(e) {
                 e.preventDefault();
                 const data = new FormData(form);
@@ -76,7 +76,7 @@
                   body: data,
                 })
                 .then(() => {
-                window.location.href = '/RF Form/rf-landing-page.html';
+                window.location.href = '/rf-landing-page.html';
                 })
               });
             });

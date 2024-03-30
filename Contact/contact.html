@@ -70,19 +70,22 @@
 
         <!-- CONTACT FORM -->
         <div class="container">
-            <form action="action_page.php">
+            <form action="/Contact/contact-form.php" method="post">
           
-              <label for="fname">First Name</label>
-              <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+              <!-- <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Your first name.." required>
           
               <label for="lname">Last Name</label>
-              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              <input type="text" id="lname" name="lname" placeholder="Your last name.." required> -->
+
+              <label for="lname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Your full name..." required>
 
               <label for="email">Email</label>
-              <input type="text" id="email" name="email" placeholder="Email address..">
+              <input type="email" id="email" name="email" placeholder="Email address.." required>
                       
               <label for="msg">Message</label>
-              <textarea id="msg" name="msg" placeholder="Write something.." style="height:200px"></textarea>
+              <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea required>
           
               <input type="submit" value="Submit">
           

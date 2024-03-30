@@ -722,7 +722,7 @@ thead {
 }
 
 .submit-button {
-    background-color: #81BB4E;
+    /* background-color: #81BB4E;
     border: none;
     border-radius: 1vw;
     color: #fff;
@@ -731,28 +731,53 @@ thead {
     text-decoration: none;
     font-size: 1.5vw;
     cursor: pointer;
-    margin: auto;
+    margin: auto; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: var(--fcg-green);
+    border: 0.25vw solid black;
+    border-radius: 2vw;
+    color: black;
+    padding: 1vw 2vw 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: Futura-Book;
+    font-size: 2.5vw;
+    cursor: pointer;
+    margin: 35px auto 100px auto;
 }
 
 .submit-button:hover {
-    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24),0 17px 25px 0 rgba(0,0,0,0.19);
+    /* box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24),0 17px 25px 0 rgba(0,0,0,0.19); */
+
+    box-shadow: 0 5px 16px 0 rgba(173, 173, 173, 0.24),0 17px 25px 0 rgba(173, 173, 173, 0.24);
+    transition: all 0.3s ease 0s;
+    border: 0.25vw solid #81BB4E;
+    border-radius: 2vw;
+    background-color: #81BB4E;
+    color: white;
 }
 
-.center {
-    display: flex;
+
+/* .center {
+    /* display: flex;
     justify-content: center;
     align-items: center;
     /* height: 75px;
     font-size: 45px;
     padding: 10px 25px 10px 25px;
     margin-top: 50px;
-    margin-bottom: 100px; */
+    margin-bottom: 100px;
     height: 4.5vw;
     font-size: 3vw;
     padding: 1vw;
     margin-top: 4vw;
     margin-bottom: 6vw;
-}
+} */
 
 .submit-warning {
     font-family: Consolas;

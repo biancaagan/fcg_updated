@@ -55,6 +55,8 @@ function doPost (e) {
 
 6. Make sure " initialSetup " is selected and click return
 
+  ***click "RUN"
+
 7. Review permissions, click Google account, blah blah blah
 
 8. In the left panel, click the symbol that looks like a clock (Triggers)
@@ -62,6 +64,8 @@ function doPost (e) {
 9. Click " + Add Trigger "
 
 10. " Choose which function to run " --> doPost
+
+    **" Choose which deployment should run " --> Head
 
 11. " Select event source " --> From Spreadsheet
 

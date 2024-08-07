@@ -8,6 +8,7 @@
 
 5. Paste the following code and save (command+s)
 
+
 // Original code from https://github.com/jamiewilson/form-to-google-sheets
 // Updated for 2021 and ES6 standards
 
@@ -31,7 +32,9 @@ function doPost (e) {
     const nextRow = sheet.getLastRow() + 1
 
     const newRow = headers.map(function(header) {
-      return header === 'Date Submitted' ? new Date() : e.parameter[header]
+      var timeZone = Session.getScriptTimeZone();
+      var date = Utilities.formatDate(new Date(), timeZone, "MM-dd-yyyy | HH:mm:ss");
+      return header === 'Date Submitted' ? date : e.parameter[header]
     })
 
     sheet.getRange(nextRow, 1, 1, newRow.length).setValues([newRow])

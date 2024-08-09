@@ -714,6 +714,35 @@ thead {
     cursor: pointer;
 }
 
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-left: 2vw;
+    /* border-bottom: 1px dotted black; */
+  }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 18vw;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 14px 0px 14px 14px;
+
+/* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+  
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.help {
+    cursor: help;
+}
 
 .comments-section {
     border-style: dotted;

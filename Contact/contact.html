@@ -70,8 +70,28 @@
         </div>
 
         <!-- CONTACT FORM -->
+        <script>
+            // https://stackoverflow.com/questions/70767778/html-form-submission-to-google-sheets-using-apps-scripts-landing-thank-you-pag
+            window.addEventListener("load", function() {
+              const form = document.getElementById('rf-form');
+              form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                  method: 'POST',
+                  body: data,
+                })
+                .then(() => {
+                window.location.href = '/RF Form Template/rf-landing-page.html';
+                })
+              });
+            });
+        </script>
+
         <div class="container">
-            <form action="/Contact/contact-form.php" method="post">
+            <form method="POST" action="https://script.google.com/macros/s/AKfycbw3LYzx0tISGL0y8Rb7MofyGoqFZUSV2Y0KR3YAXPJKOEOVio7PabWDtBFyN4ACQE-j/exec">
+            <!-- <form action="contact-form.php" method="post"> -->
           
               <!-- <label for="fname">First Name</label>
               <input type="text" id="fname" name="fname" placeholder="Your first name.." required>
@@ -80,13 +100,13 @@
               <input type="text" id="lname" name="lname" placeholder="Your last name.." required> -->
 
               <label for="lname">Full Name</label>
-              <input type="text" id="fullname" name="fullname" placeholder="Your full name..." required>
+              <input type="text" id="fullname" name="Name" placeholder="Your full name..." required>
 
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Email address.." required>
+              <input type="email" id="email" name="Email" placeholder="Email address.." required>
                       
               <label for="msg">Message</label>
-              <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea required>
+              <textarea id="message" name="Message" placeholder="Write something.." style="height:200px"></textarea required>
           
               <input type="submit" value="Submit">
           

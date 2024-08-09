@@ -636,6 +636,13 @@ input[type=checkbox] {
 /* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio ^^^^^^^^^^^^^^^^^^^^^^^^^^^^  */
 
 /* WIRELESS DEVICES */
+.device-example {
+    color: gray;
+    font-style: italic;
+    padding-top: 0.5vw;
+    /* margin: 5px; */
+}
+
 .wireless-form-section {
     border-style: dotted;
     border-radius: 1vw;

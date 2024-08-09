@@ -73,7 +73,7 @@
         <script>
             // https://stackoverflow.com/questions/70767778/html-form-submission-to-google-sheets-using-apps-scripts-landing-thank-you-pag
             window.addEventListener("load", function() {
-              const form = document.getElementById('rf-form');
+              const form = document.getElementById('contact-form');
               form.addEventListener("submit", function(e) {
                 e.preventDefault();
                 const data = new FormData(form);
@@ -83,14 +83,14 @@
                   body: data,
                 })
                 .then(() => {
-                window.location.href = '/RF Form Template/rf-landing-page.html';
+                window.location.href = '/Contact/contact-landing-page.html';
                 })
               });
             });
         </script>
 
         <div class="container">
-            <form method="POST" action="https://script.google.com/macros/s/AKfycbw3LYzx0tISGL0y8Rb7MofyGoqFZUSV2Y0KR3YAXPJKOEOVio7PabWDtBFyN4ACQE-j/exec">
+            <form id='contact-form' method="POST" action="https://script.google.com/macros/s/AKfycbw3LYzx0tISGL0y8Rb7MofyGoqFZUSV2Y0KR3YAXPJKOEOVio7PabWDtBFyN4ACQE-j/exec">
             <!-- <form action="contact-form.php" method="post"> -->
           
               <!-- <label for="fname">First Name</label>

@@ -737,6 +737,7 @@ thead {
     position: relative;
     display: inline-block;
     margin-left: 2vw;
+    font-size: 2vw;
     /* border-bottom: 1px dotted black; */
   }
 
@@ -747,6 +748,7 @@ thead {
     color: #fff;
     text-align: left;
     border-radius: 6px;
+    font-size: 1.3vw;
     padding: 14px 0px 14px 14px;
 
 /* Position the tooltip */
@@ -755,6 +757,10 @@ thead {
 }
   
 .tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip:focus .tooltiptext {
     visibility: visible;
 }
 
@@ -876,23 +882,23 @@ thead {
     }
 
     .form-header {
-        width: 90vw;
+        width: 80vw;
     }
 
     .form-section {
-        width: 90vw;
+        width: 80vw;
     }
 
     .radio-form-section {
-        width: 90vw;
+        width: 80vw;
     }
 
     .wireless-form-section {
-        width: 90vw;
+        width: 80vw;
     }
 
     .comments-section {
-        width: 90vw;
+        width: 80vw;
     }
 
     .form-title {

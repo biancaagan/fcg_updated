@@ -51,9 +51,9 @@ function addRow() { // 24 / 14 / 22 / 18 / 18
         var cell3 = row.insertCell(-1);
         var cell4 = row.insertCell(-1);
         var cell5 = row.insertCell(-1);
-        cell1.style.width = "28%";
-        cell2.style.width = "12%";
-        cell3.style.width = "20%";
+        cell1.style.width = "30%";
+        cell2.style.width = "10%";
+        cell3.style.width = "22%";
         cell4.style.width = "18%";
         cell5.style.width = "18%";
 

@@ -875,6 +875,26 @@ thead {
         margin-top: 2vw;
     }
 
+    .form-header {
+        width: 90vw;
+    }
+
+    .form-section {
+        width: 90vw;
+    }
+
+    .radio-form-section {
+        width: 90vw;
+    }
+
+    .wireless-form-section {
+        width: 90vw;
+    }
+
+    .comments-section {
+        width: 90vw;
+    }
+
     .form-title {
         font-size: 6vw;
     }

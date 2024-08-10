@@ -689,7 +689,7 @@ select {
     /* border-style: dotted; */
     width: 15vw;
     height: 2.5vw;
-    margin: 0 1vw;
+    margin: 0vw 0vw 0vw 0vw;
     font-family: Futura-Book;
     font-size: 1.3vw;
 }

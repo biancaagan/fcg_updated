@@ -945,35 +945,39 @@ thead {
 
     .checkbox-container {
         padding-left: 5.5vw;
-        font-size: 3.5vw;
+        font-size: 2.5vw;
     }
     .checkmark {
-        width: 4vw;
-        height: 4vw;
+        width: 3vw;
+        height: 3vw;
     }
 
     .checkbox-container .checkmark:after {
         left: 1.3vw;
-        top: 0.5vw;
-        width: 0.75vw;
+        top: 0.2vw;
+        width: 0.5vw;
         height: 2vw;
     }
 
     .radio-container {
         padding-left: 5.5vw;
-        font-size: 3.5vw;
+        font-size: 2.5vw;
+    }
+
+    #radio-notice {
+        font-size: 2.5vw;
     }
 
     .radio-mark {
-        width: 4vw;
-        height: 4vw;
+        width: 3vw;
+        height: 3vw;
     }
 
     .radio-container .radio-mark:after {
-        top: 1.3vw;
-        left: 1.3vw;
-        width: 1.5vw;
-        height: 1.5vw;
+        top: 0.9vw;
+        left: 0.9vw;
+        width: 1.2vw;
+        height: 1.2vw;
     }
 
     .wireless-form-section .radio-container {
@@ -992,6 +996,21 @@ thead {
         font-size: 3vw;
     }
 
+    .tooltip {
+        font-size: 2.8vw;
+    }
+
+    .tooltip .tooltiptext {
+        /* visibility: hidden; */
+        width: 35vw;
+        /* background-color: black; */
+        /* color: #fff; */
+        text-align: left;
+        border-radius: 6px;
+        font-size: 2.5vw;
+        padding: 14px 0px 14px 14px;
+    }
+
     select {
         width: 100%;
         height: 5vw;
@@ -999,11 +1018,12 @@ thead {
       }
 
     .submit-button {
-        border-radius: 1vw;
+        border: 0.5vw solid black;
+        border-radius: 4vw;
         padding: 1vw 2vw;
         font-size: 3vw;
         cursor: pointer;
-        margin: auto;
+        /* margin: auto; */
     }
 
     .center {

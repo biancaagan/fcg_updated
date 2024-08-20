@@ -200,7 +200,7 @@ img.company-logo {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-family: Consolas;
     width: fit-content;
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 30px auto auto auto;
     padding: 20px;
 }
@@ -212,7 +212,7 @@ img.company-logo {
     padding: 20px;
     font-family: Futura-Book;
     color: #81BB4E;
-    font-size: 4vw;
+    font-size: 3.5vw;
 }
 
 #page-desc {

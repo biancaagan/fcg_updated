@@ -122,8 +122,9 @@
                     <label>Contact phone:</label>
                     <input name="Phone" type="text" placeholder="Enter phone number" required/>
             </div>
-
-            <p><i>&#40;Communication including assigned frequencies will be sent to the submitted email, please provide a good email address or forward the information.&#41;</i></p>
+            <div class="form-item"></div>
+                <p><i>&#40;Communication including assigned frequencies will be sent to the submitted email, please provide a good email address or forward the information.&#41;</i></p>
+                 </div>  
     </div>
 
     <!-- SHOW INFORMATION -->
@@ -295,15 +296,11 @@
                             </p>  
                     </div>
 
-                    <br>
-
                     <div class="form-item required-field">
                             <!-- Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to OR attach a file:<br> -->
                             Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to:<br>
                             <br>
-
-                            <div>
-                                <p style="font-size: 14px; font-style: italic; "><u>If you have multi-zone radios, please enter all zones your radios have.</u></p>
+                                <u style="font-size: 14px; font-style: italic;">If you have multi-zone radios, please enter all zones your radios have.</u>
                             </div>
                             <br>
                             
@@ -359,15 +356,14 @@
                             </label>
                     </fieldset>
             </div>
-
-            <div>
-                <p style="color: red; font-family: Futura-Medium;">*<u>WMAS devices:</u><br>
-                        WMAS frequencies will be accomodated when possible given the RF environment. If requested less than 24 hours before load in or show day, WMAS frequencies are not guaranteed.</p>
-            </div>
             
             <!--  SHOW / HIDE THIS SECTION -->
             <div id="device-info" class="form-subsection">
                     <div class="form-text">
+                        <p style="color: red; font-family: Futura-Medium;">
+                        * WMAS frequencies will be accomodated when possible given the RF environment. 
+                        If requested less than 24 hours before load in or show day, WMAS frequencies are not guaranteed.</p>
+                        <br>
                             <p>Please specify your own wireless equipment below.</p>
                             <p>Click the "+" or "-" button for more or less devices.</p>
                     </div>

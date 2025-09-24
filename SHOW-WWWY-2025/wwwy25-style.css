@@ -391,11 +391,11 @@ footer {
     font-size: 1.3vw;
 }
 
-.form-notes {
+/* .form-notes {
     padding: 0.5vw 1vw 0.5vw 1vw;
     font-family: Futura-Medium;
     font-size: 1.3vw;
-}
+} */
 
 .form-question {
     /* border-style: dotted; */
@@ -928,7 +928,7 @@ thead {
     }
 
     .form-notes {
-        font-size: 1.3vw;
+        font-size: 2.5vw;
     }
 
     .form-text {

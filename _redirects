@@ -5,11 +5,18 @@
 /contact    /Contact/contact.html   200!
 /contact-submit     /Contact/contact-landing-page.html  200!
 
-/foolinlove  /SHOW-Fool_In_Love-2024/fool_in_love24-form.html 200!
-/foolinlove-submit  /SHOW-Fool_In_Love-2024/fool_in_love24-landing-page.html 200!
 
-/soundside  /SHOW-Soundside-2024/soundside24-form.html 200!
-/soundside-submit  /SHOW-Soundside-2024/soundside24-landing-page.html 200!
+/wwwy25  /SHOW-WWWY-2025/wwwy25-form.html 200!
+/wwwy25-submit  /SHOW-WWWY-2025/wwwy25-landing-page.html 200!
 
-/wwwy  /SHOW-WWWY-2024/wwwy24-form.html 200!
-/wwwy-submit  /SHOW-WWWY-2024/wwwy24-landing-page.html 200!
+
+
+
+/foolinlove24  /SHOW-Fool_In_Love-2024/fool_in_love24-form.html 200!
+/foolinlove24-submit  /SHOW-Fool_In_Love-2024/fool_in_love24-landing-page.html 200!
+
+/soundside24  /SHOW-Soundside-2024/soundside24-form.html 200!
+/soundside24-submit  /SHOW-Soundside-2024/soundside24-landing-page.html 200!
+
+/wwwy24  /SHOW-WWWY-2024/wwwy24-form.html 200!
+/wwwy24-submit  /SHOW-WWWY-2024/wwwy24-landing-page.html 200!

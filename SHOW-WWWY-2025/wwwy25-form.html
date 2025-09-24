@@ -7,8 +7,8 @@
     <link rel="icon" type="image/png" href="/Media/FCG Logo 2.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/RF Form Template/rf-form-style.css" />
-    <script src="/RF Form Template/rf-form.js"></script>
+    <link rel="stylesheet" href="/SHOW-WWWY-2025/wwwy25-style.css" />
+    <script src="/SHOW-WWWY-2025/wwwy25-form.js"></script>
     <title>FCG</title>
 </head>
 
@@ -42,7 +42,7 @@
                         <i class="fa fa-caret-down"></i>
                         <!-- DROPDOWN MENU -->
                         <ul class="dropdown">
-                            <li><a href="https://freqcoordgroup.com/wwwy">When We Were Young</a></li>
+                            <li><a href="https://freqcoordgroup.com/wwwy25">When We Were Young</a></li>
                         </ul>
                     </li>
                 </div>
@@ -73,22 +73,29 @@
                   body: data,
                 })
                 .then(() => {
-                window.location.href = 'https://freqcoordgroup.com/foolinlove-submit';
+                window.location.href = 'https://freqcoordgroup.com/wwwy-submit';
                 })
               });
             });
             </script>
 
     <!-- <form class="rf-form" method="POST" action="https://script.google.com/macros/s/AKfycbwNhIQvfWCr-BPeAvnPoOtznPvqyMro9de2i9rYqnDcYbC0zIayCjUdWV1SRgHbyN0/exec"> -->
-        <form class="rf-form" id="rf-form" method="POST" action="https://script.google.com/macros/s/AKfycbwJNEfR3W4LiK6ygRzUJhkDsEXJ_YIxxZDGn7qkbEVeEHLeISzPokptnQYWdK19VFjK/exec">
+        <form class="rf-form" id="rf-form" method="POST" action="https://script.google.com/macros/s/AKfycbzIQFbGSM-W8_YyXrmNtzSt0HIj4JOciesXcRmE2DRc-qwpaGrKgtgBdmKcar3iGA/exec">
 
     <!-- FORM HEADER -->
     <div class="form-header">
             <h1 class="form-title">Frequency Coordination Requests</h1><br>
             <!-- <h3 class="form-show">WWWY 2023</h3><br> -->
-            <img class="show-logo" src="/MMMF Test/MarchMadnessLogo.jpg">
-            <p class="form-description">FCG is proud to provide frequency coordination for<br>the 2024 March Madness Music Festival.<br>
-                    Please submit your coordination requests below.</p><br>
+            <img class="show-logo" src="/SHOW-WWWY-2025/wwwy25-logo.jpg">
+            <p class="form-description">FCG is proud to provide frequency coordination for<br>the 2025 When We Were Young Music Festival.<br>
+                    Please submit your coordination requests below.<br><br><i>This can include but is not limited to wireless microphones, backline wireless, 
+                    IEMs,<br>2-way radios, drones, intercom, wireless cameras, etc.</i>
+                    <br><br>
+                    <em style="color: red; font-family: Futura-Bold;"><u>Please be aware the RF environment at the Las Vegas Festival Grounds is very congested.
+                        The 470-554 MHz range is occupied entirely by DTV. While some frequencies assigned here may be usable,
+                        others may not be as clean.<br>It is recommended to utilize the stage gear when possible.
+                    </u></em>
+                </p><br>
     </div>
 
     <!-- CONTACT INFORMATION -->
@@ -107,7 +114,7 @@
             </div>
 
             <div class="form-item required-field">
-                    <label>Contact email: &#40;frequencies will be sent to this email&#41;</label>
+                    <label>Contact email:</label>
                     <input name="Email" type="text" placeholder="Enter email" required/>
             </div>
 
@@ -115,6 +122,8 @@
                     <label>Contact phone:</label>
                     <input name="Phone" type="text" placeholder="Enter phone number" required/>
             </div>
+
+            <p><i>&#40;Communication including assigned frequencies will be sent to the submitted email, please provide a good email address or forward the information.&#41;</i></p>
     </div>
 
     <!-- SHOW INFORMATION -->
@@ -129,16 +138,16 @@
 
                     <!-- Checkboxes -->
                     <div class="checkbox-group">
-                        <label class="checkbox-container" for="date-1">April 5
-                            <input type="checkbox" id="date-1" name="date" onchange="updateDates()" value="April 5">
+                        <label class="checkbox-container" for="date-1">October 17 (Early Load-In)
+                            <input type="checkbox" id="date-1" name="date" onchange="updateDates()" value="October 17 (Early Load-In)">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container" for="date-2">April 6
-                            <input type="checkbox" id="date-2" name="date" onchange="updateDates()" value="April 6">
+                        <label class="checkbox-container" for="date-2">October 18
+                            <input type="checkbox" id="date-2" name="date" onchange="updateDates()" value="October 18">
                             <span class="checkmark"></span>
                         </label>
-                        <label class="checkbox-container" for="date-3">April 7
-                            <input type="checkbox" id="date-3" name="date" onchange="updateDates()" value="April 7">
+                        <label class="checkbox-container" for="date-3">October 19
+                            <input type="checkbox" id="date-3" name="date" onchange="updateDates()" value="October 19">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -182,6 +191,14 @@
                         <label class="checkbox-container" for="loc-3">Stage 3
                             <input type="checkbox" id="loc-3" name="location" onchange="updateLocations()" value="Stage 3">
                             <span class="checkmark"></span>
+                        </label>
+                        <label class="checkbox-container" for="loc-4">Stage 4
+                                <input type="checkbox" id="loc-4" name="location" onchange="updateLocations()" value="Stage 4">
+                                <span class="checkmark"></span>
+                            </label>
+                        <label class="checkbox-container" for="loc-5">Stage 5
+                                <input type="checkbox" id="loc-5" name="location" onchange="updateLocations()" value="Stage 5">
+                                <span class="checkmark"></span>
                         </label>
                         <label class="checkbox-container" for="loc-other">Other &#40;Please specify below&#41;
                             <input type="checkbox" id="loc-other" name="location" onchange="updateLocations()" value="Other">
@@ -278,16 +295,17 @@
                             </p>  
                     </div>
 
-                    <div>
-                        <p style="font-size: 14px; font-style: italic; ">*<u>If you have Road Radios or Clair Radios, please enter what zone&#40;s&#41; your radios have.</u></p>
-                    </div>
-
                     <br>
 
                     <div class="form-item required-field">
                             <!-- Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to OR attach a file:<br> -->
                             Please enter ALL radio channel numbers and corresponding frequencies your radios are programmed to:<br>
+                            <br>
 
+                            <div>
+                                <p style="font-size: 14px; font-style: italic; "><u>If you have multi-zone radios, please enter all zones your radios have.</u></p>
+                            </div>
+                            <br>
                             
                             <!-- Code for file upload option -->
                             <!-- <label for="radio-files">Select file(s):</label>
@@ -342,6 +360,10 @@
                     </fieldset>
             </div>
 
+            <div>
+                <p style="color: red; font-family: Futura-Medium;">*<u>WMAS devices:</u><br>
+                        WMAS frequencies will be accomodated when possible given the RF environment. If requested less than 24 hours before load in or show day, WMAS frequencies are not guaranteed.</p>
+            </div>
             
             <!--  SHOW / HIDE THIS SECTION -->
             <div id="device-info" class="form-subsection">
@@ -393,11 +415,11 @@
                         <!-- EXAMPLE -->
                         <div class="device-example">
                                 <tr class="device-example">
-                                        <td style="width:30%">Type</td>
-                                        <td style="width:10%"># of Channels</td>
-                                        <td style="width:20%">Manufacturer</td>
-                                        <td style="width:18%">Model</td>
-                                        <td style="width:18%">Range</td>
+                                        <td style="width:30%">Example: Microphone</td>
+                                        <td style="width:10%">8</td>
+                                        <td style="width:22%">Shure</td>
+                                        <td style="width:18%">Axient Digital</td>
+                                        <td style="width:18%">G57</td>
                                 </tr>
                         </div>
 
@@ -483,7 +505,7 @@
     <div class="submit-warning">
         <h3>
                 <u>Warning:</u> There is no way to edit a request.<br>
-                If you need to make changes, please re-submit or fill out the contact form.<br>
+                If you need to make changes, please re-submit<br>
                 Apologies for any inconvenience.
         </h3>
     </div>
@@ -504,7 +526,7 @@
                     </a>
             </div>
 
-            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2024 | Frequency Coordination Group, LLC.</h2>
+            <h2 class="footer-credits"><a id="copyright" href="https://www.needafreq.com/">&copy;</a> 2025 | Frequency Coordination Group, LLC.</h2>
     </footer>
     <!-- ----------------------- ----------------------- ----------------------- -->
 </body>

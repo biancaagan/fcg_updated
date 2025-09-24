@@ -67,9 +67,9 @@
 
               form.addEventListener("submit", function(e) {
                 // Disable submit button after first click:
-              document.getElementById('submitButton').disabled = true;
+                document.getElementById('submitButton').disabled = true;
                 document.getElementById('submitButton').textContent = 'Submitting...';
-                
+
                 e.preventDefault();
                 const data = new FormData(form);
                 const action = e.target.action;
@@ -500,8 +500,8 @@
             </script>
     </div>
 
-    <!-- <button class="submit-button center">Submit</button> -->
-    <input type="submit" id="submitButton" class="submit-button center">
+    <button type="submit" id="submitButton" class="submit-button center">SUBMIT</button>
+    <!-- <input type="submit" id="submitButton" class="submit-button center"> -->
 
     <div class="submit-warning">
         <h3>

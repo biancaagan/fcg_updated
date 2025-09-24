@@ -74,7 +74,7 @@ function doPost (e) {
 
 12. " Select event type " --> On Form Submit
 
-13. Do the same review permissions thing
+13. Click SAVE. Do the same review permissions thing
 
 14. Click the " Deploy " > " New Deployment "
 

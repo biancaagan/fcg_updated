@@ -64,7 +64,12 @@
             // https://stackoverflow.com/questions/70767778/html-form-submission-to-google-sheets-using-apps-scripts-landing-thank-you-pag
             window.addEventListener("load", function() {
               const form = document.getElementById('rf-form');
+
               form.addEventListener("submit", function(e) {
+                // Disable submit button after first click:
+              document.getElementById('submitButton').disabled = true;
+                document.getElementById('submitButton').textContent = 'Submitting...';
+                
                 e.preventDefault();
                 const data = new FormData(form);
                 const action = e.target.action;
@@ -77,9 +82,6 @@
                 })
               });
             });
-
-            document.getElementById('submitButton').disabled = true;
-            document.getElementById('submitButton').textContent = 'Submitting...';
             </script>
 
     <!-- <form class="rf-form" method="POST" action="https://script.google.com/macros/s/AKfycbwNhIQvfWCr-BPeAvnPoOtznPvqyMro9de2i9rYqnDcYbC0zIayCjUdWV1SRgHbyN0/exec"> -->

@@ -391,6 +391,12 @@ footer {
     font-size: 1.3vw;
 }
 
+.form-notes {
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    font-family: Futura-Medium;
+    font-size: 1.3vw;
+}
+
 .form-question {
     /* border-style: dotted; */
     width: fit-content;
@@ -919,6 +925,10 @@ thead {
 
     .form-item {
         font-size: 3vw;
+    }
+
+    .form-notes {
+        font-size: 1.3vw;
     }
 
     .form-text {

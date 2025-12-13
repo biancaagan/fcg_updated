@@ -207,10 +207,12 @@ img.company-logo {
 #page-subtitle {
     /* border-style: dotted; */
     width: fit-content;
+    text-align: center;
     margin: 10px auto auto auto;
     padding: 20px;
     font-family: Futura-Book;
-    color: #81BB4E;
+    /* color: #81BB4E; */
+    color: black;
     font-size: 4vw;
 }
 
@@ -223,6 +225,99 @@ img.company-logo {
     font-family: Consolas;
     font-size: 1.5vw;
     word-wrap: break-word;
+}
+
+.page-link {
+    color: var(--fcg-green);
+}
+.page-link a {
+    color: var(--fcg-green);
+}
+.page-link a:link {
+    color: var(--fcg-green);
+}
+.page-link a:visited {
+    color: var(--fcg-green);
+}
+.page-link a:hover {
+    color: var(--fcg-green);
+}
+.page-link a:active {
+    color: var(--fcg-green);
+}
+
+.inventory-wrapper {
+    /* Centers the entire grid container on the page */
+    max-width: 940px; /* Set a max-width for the grid */
+    margin: 0 auto;   /* Centers the block horizontally */
+    padding: 1rem;
+}
+
+.inventory-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+}
+
+.main-item {
+    background-color: #81bb4e75;
+    padding: 3vw;
+    border: dotted;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Consolas;
+    font-weight: bolder;
+    font-size: 1.4vw;
+    
+}
+
+/* .item, .item-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.item {
+    position: relative;
+    display: inline-block;
+    background-color: #b8b8b875;
+    cursor: pointer;
+    padding: 2vw;
+    border: dotted;
+    border-radius: 0.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Consolas;
+    font-size: 1.2vw; 
+}
+
+.item-popup {
+  visibility: hidden; /* Hides the pop-up by default */
+  width: 220px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute; /* Positions the pop-up over other content */
+  z-index: 1; /* Ensures the pop-up appears on top */
+  bottom: 20%; /* Positions the pop-up above the hovered text */
+  left: 50%;
+  margin-left: -60px; /* Centers the pop-up (half of its width) */
+  /* Optional: Add smooth transition effect using opacity */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show the pop-up when hovering over the parent container */
+.item:hover .item-popup {
+  visibility: visible; /* Makes the pop-up visible */
+  opacity: 1; /* Makes the pop-up fully opaque (for the fade effect) */
 }
 
 
@@ -242,6 +337,31 @@ img.company-logo {
 }
 
 .contact-button:hover {
+    box-shadow: 0 5px 16px 0 rgba(173, 173, 173, 0.24),0 17px 25px 0 rgba(173, 173, 173, 0.24);
+    transition: all 0.3s ease 0s;
+    border: 0.25vw solid #81BB4E;
+    border-radius: 2vw;
+    background-color: #81BB4E;
+    color: white;
+}
+
+/* RENTALS BUTTON */
+.rentals-button {
+    background-color: var(--fcg-green);
+    border: 0.25vw solid black;
+    border-radius: 2vw;
+    color: black;
+    padding: 1vw 2vw 1vw 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-family: Futura-Book;
+    font-size: 2vw;
+    cursor: pointer;
+    margin: 14px auto 100px auto;
+    /* border: dotted; */
+}
+
+.rentals-button:hover {
     box-shadow: 0 5px 16px 0 rgba(173, 173, 173, 0.24),0 17px 25px 0 rgba(173, 173, 173, 0.24);
     transition: all 0.3s ease 0s;
     border: 0.25vw solid #81BB4E;
